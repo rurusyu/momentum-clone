@@ -1,3 +1,6 @@
+body{
+  background-color: #2c3e50;
+}
 
 .clicked{
    color: #7f8c8d;
@@ -12,4 +15,26 @@
 HTML에서 박스만들고 JS에서 DOUMENT 이용해서 사용하는 방법도 있다. */
 .showing {
   display: block;
+}
+
+/*조금더 자연스러운 연출을 위해 애니메이션 사용*/
+@keyframes fadeIn {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+/*배경화면.js에서 클래스리스트에 이름넣은 이미지 편집*/
+.bgImage{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /*-1로해줘야 배경화면이 맨 아래 깔림*/
+  animation: fadeIn 0.5s linear;
 }
